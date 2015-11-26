@@ -1,0 +1,34 @@
+<!--
++==========================================================================
+| Batch Processing
++==========================================================================
+-->
+
+<project name="stencyl" basedir="." default="dist">
+	
+	<property name="pkg" value="com/polydes/batch" />
+	<property name="main" value="com.polydes.batch.BatchProcessing" />
+	
+	<property name="name" value="Batch Processing" />
+	<property name="description" value="Do batch processing on resources." />
+	<property name="author" value="Justin Espedal" />
+	<property name="internalVersion" value="1" />
+	<property name="version" value="0.0.1" />
+	
+	<include file="../Common/build-helper.xml" as="common" />
+	
+	<target name="dist">
+		
+		<antcall>
+			
+			<target name="common.compile" />
+			
+			<target name="common.copy-resources" />
+			
+			<target name="common.makejar" />
+			
+		</antcall>
+		
+	</target>
+
+</project>
